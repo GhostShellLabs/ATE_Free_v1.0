@@ -1,0 +1,203 @@
+LEGAL & DISCLAIMER
+Atlas Tuning Engine (ATE_Free) v1.0
+GhostShell Labs
+
+---
+
+IMPORTANT NOTICE
+
+This document governs the legal and liability context for Atlas Tuning Engine (ATE_Free).
+
+By using this software, you acknowledge and accept the terms outlined in this document and in LICENSE.txt.
+
+If you do not agree, do not use this software.
+
+---
+
+NO WARRANTY
+
+Atlas Tuning Engine (ATE_Free) is provided "AS IS".
+
+No warranty is expressed or implied, including but not limited to:
+
+• Fitness for a particular purpose  
+• System compatibility  
+• Performance outcome  
+• Stability guarantee  
+• Error-free operation  
+• Data safety  
+
+GhostShell Labs makes no guarantees that this software will improve your system's performance or stability.
+
+---
+
+USER RESPONSIBILITY
+
+By using this software, you acknowledge:
+
+• You are responsible for system backups  
+• You are responsible for changes applied  
+• You are responsible for recovery actions  
+• You understand the software modifies system configuration  
+• You accept the inherent risk of doing so  
+
+You are expected to:
+
+• Review logs  
+• Validate changes  
+• Use restore functions when needed  
+• Never apply changes blindly  
+
+ATE provides tooling — not supervision.
+
+---
+
+NO LIABILITY
+
+Under no circumstances shall GhostShell Labs be held liable for:
+
+• Data loss  
+• Configuration corruption  
+• System instability  
+• Software conflicts  
+• Hardware failure  
+• Performance regression  
+• Downtime  
+• Financial loss  
+
+Liability is excluded whether damages arise from:
+
+• Software malfunction  
+• User error  
+• Unsupported environment usage  
+• Misinterpretation of results  
+• Incomplete restoration  
+
+Use is at your own risk.
+
+---
+
+NO GUARANTEE OF RESULTS
+
+Performance outcomes vary by system.
+
+No improvement is promised.
+
+No result is guaranteed.
+
+ATE is designed to reduce common Windows inefficiencies — not override hardware limitations.
+
+---
+
+BOUNDARIES OF OPERATION
+
+ATE does NOT:
+
+• Modify BIOS
+• Flash firmware
+• Touch bootloaders
+• Partition disks
+• Modify encryption
+• Replace drivers
+• Install background services
+• Collect telemetry
+• Upload data
+• Operate remotely
+
+ATE operates strictly within Windows configuration boundaries.
+
+---
+
+ENVIRONMENT RESTRICTIONS
+
+ATE is intended for:
+
+• Windows 10 / Windows 11
+• PowerShell 5.1
+
+ATE is NOT supported on:
+
+• Windows Server
+• PowerShell 7+
+• Virtual machines
+• Modified installations
+
+Using ATE outside supported environments is at your own risk.
+
+---
+
+NO SERVICE AGREEMENT
+
+ATE is not a managed service.
+
+No support contract exists.
+
+No SLA is implied.
+
+No custom configuration service is offered.
+
+Community assistance is provided on a best-effort basis only.
+
+---
+
+NO COMMERCIAL RIGHTS
+
+ATE is licensed for personal, non-commercial use only.
+
+You may not:
+
+• Sell the software  
+• Rent the software  
+• Bundle the software  
+• Redistribute the software  
+• Mirror the software  
+• Rebrand the software  
+• Offer it as part of a paid service  
+
+All use must comply with LICENSE.txt.
+
+---
+
+PRIVACY
+
+ATE does not collect personal information.
+
+ATE does not transmit data.
+
+ATE does not track users.
+
+All execution is local.
+
+---
+
+ENTIRE AGREEMENT
+
+This document and LICENSE.txt constitute the complete legal context for ATE_Free.
+
+In the event of conflict, LICENSE.txt governs.
+
+---
+
+ACCEPTANCE
+
+By running ATE_Free, you acknowledge that:
+
+• You understand the risks
+• You accept responsibility
+• You agree to all terms
+• You assume all liability
+
+If you do not agree, do not use the software.
+
+---
+
+GOVERNING LAW
+
+This disclaimer operates under the laws of the State of Alabama, United States.
+
+---
+
+END OF LEGAL NOTICE
+
+GhostShell Labs
+2025

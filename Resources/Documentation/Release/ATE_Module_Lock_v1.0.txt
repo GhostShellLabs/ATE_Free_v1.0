@@ -1,0 +1,22 @@
+ATE MODULE LOCK
+Version: 1.0
+Status: Baseline Locked
+Date: 2025-12-01
+Governed By: Master_Release_Plan_v1.0.txt and MMRL_v1.0.txt
+
+Purpose:
+Freezes the certified module list for ATE_Free v1.0.
+
+Module Lock Rules:
+- Only the modules listed in MMRL_v1.0 are permitted in the ATE_Free v1.0 Engine directory.
+- No module may be added, removed, renamed, or repurposed without:
+  - Commander approval.
+  - MMRL update.
+  - AMDD update.
+  - Master Release Plan update (if scope or architecture changes).
+
+Deprecated / Forbidden:
+- ATE_Console.ps1 is explicitly removed and must not be reintroduced without full review and updated doctrine.
+
+Changelog:
+- 2025-12-01 – Module Lock v1.0 established for ATE_Free v1.0.

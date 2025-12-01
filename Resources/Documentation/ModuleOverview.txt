@@ -1,0 +1,357 @@
+MODULE OVERVIEW
+Atlas Tuning Engine (ATE_Free) v1.0
+GhostShell Labs
+
+---
+
+PURPOSE OF THIS DOCUMENT
+
+This document exists to explain how Atlas Tuning Engine is structured internally so you understand:
+• What runs on your system
+• How it is organized
+• What each part does
+• Why it is built conservatively
+• Where risk is intentionally avoided
+
+You do not need to understand every module to use ATE safely.
+
+This document exists for transparency, not requirement.
+
+---
+
+SAFETY SUMMARY (READ FIRST)
+
+• No module installs software  
+• No module runs persistently  
+• No module connects to the internet  
+• No module hides system writes  
+• All actions are logged  
+• Restore capability is built in  
+
+ATE does not operate silently.
+
+---
+
+OVERVIEW
+
+Atlas Tuning Engine (ATE_Free) is a modular Windows tuning engine designed to inspect system configuration, surface performance friction points, and apply conservative optimizations when the user explicitly allows it.
+
+ATE is designed to favor:
+• Predictability
+• Auditability
+• Reversibility
+• Minimal disruption
+
+ATE focuses on correcting configuration and reducing known inefficiencies — not imposing unsafe performance hacks.
+
+---
+
+CORE ARCHITECTURE
+
+ATE enforces strict separation between code and data.
+
+ENGINE  
+Contains all logic, orchestration, validation, and tuning rules.
+
+RESOURCES  
+Contains logs, backups, configuration files, and assets produced at runtime.
+
+This design prevents invisible state.
+Nothing is hidden.
+Nothing moves arbitrarily.
+
+ATE runs entirely locally.
+No cloud services are used.
+No external agents are required.
+
+---
+
+MODULE SYSTEM
+
+ATE is composed of independent modules.
+
+Each module:
+• Has a narrow, defined scope
+• Does not depend directly on other domain modules
+• Reports through centralized logging
+• Reads configuration through a single authority
+• Cannot affect unrelated areas
+
+If one module fails, it does not destabilize the engine.
+
+This is intentional.
+
+---
+
+MODULE DESCRIPTIONS
+
+----------------------------------------
+ATE_Bootstrap.ps1
+----------------------------------------
+ROLE
+Engine entry point. Prepares environment, validates prerequisites, and loads the core runtime.
+
+COMMUNICATION
+Uses Config, Logging, and Utilities to initialize state.
+
+ENTRY POINT
+Executed directly by user or via ATE_Launcher.bat.
+
+----------------------------------------
+ATE_Core.ps1
+----------------------------------------
+ROLE
+Central orchestrator. Owns menus, modes, and module execution order.
+
+COMMUNICATION
+Invokes all domain modules. Reads config and writes logs centrally.
+
+ENTRY POINT
+Called by ATE_Bootstrap after environment setup.
+
+----------------------------------------
+ATE_Config.ps1
+----------------------------------------
+ROLE
+Configuration authority. Loads policy data and default behavior rules.
+
+COMMUNICATION
+Provides values to all modules.
+
+ENTRY POINT
+Called by ATE_Core and any domain module needing configuration data.
+
+----------------------------------------
+ATE_Logging.ps1
+----------------------------------------
+ROLE
+Central logging engine. Writes diagnostics and summaries.
+
+COMMUNICATION
+Receives events from all modules.
+
+ENTRY POINT
+Used universally across the engine.
+
+----------------------------------------
+ATE_Utils.ps1
+----------------------------------------
+ROLE
+Shared utilities and helper functions.
+
+COMMUNICATION
+Supports all modules with reusable logic.
+
+ENTRY POINT
+Called internally wherever helper logic is required.
+
+----------------------------------------
+ATE_System.ps1
+----------------------------------------
+ROLE
+OS-level optimization and configuration alignment.
+
+COMMUNICATION
+Uses Config for policy, Logging for visibility, Utils for safe system interaction.
+
+ENTRY POINT
+Invoked by Core during system tuning phase.
+
+----------------------------------------
+ATE_Storage.ps1
+----------------------------------------
+ROLE
+Storage inspection and configuration behavior tuning.
+
+COMMUNICATION
+Reports diagnostics through Logging.
+
+ENTRY POINT
+Invoked by Core during storage phase.
+
+----------------------------------------
+ATE_Network.ps1
+----------------------------------------
+ROLE
+Network tuning and diagnostics.
+
+COMMUNICATION
+Reads config flags, reports findings.
+
+ENTRY POINT
+Invoked by Core during network phase.
+
+----------------------------------------
+ATE_GPU.ps1
+----------------------------------------
+ROLE
+Windows-side GPU configuration only.
+
+COMMUNICATION
+Restrained to OS settings — not hardware.
+
+ENTRY POINT
+Invoked by Core during GPU phase.
+
+----------------------------------------
+ATE_Audio.ps1
+----------------------------------------
+ROLE
+Audio behavior optimization without touching drivers or hardware.
+
+COMMUNICATION
+Uses registry and service awareness only.
+
+ENTRY POINT
+Invoked by Core during audio phase.
+
+----------------------------------------
+ATE_Security.ps1
+----------------------------------------
+ROLE
+Security-impact configuration review with safety-first defaults.
+
+COMMUNICATION
+Uses cautious policy enforcement and logs every action.
+
+ENTRY POINT
+Invoked by Core where security evaluation is enabled.
+
+----------------------------------------
+ATE_UI.ps1
+----------------------------------------
+ROLE
+Console clarity and presentation.
+
+COMMUNICATION
+Formatting only; does not tune systems.
+
+ENTRY POINT
+Called by Core for output rendering.
+
+----------------------------------------
+ATE_Splash.ps1
+----------------------------------------
+ROLE
+Optional visual splash.
+
+COMMUNICATION
+Zero functional interaction.
+
+ENTRY POINT
+Invoked during startup if enabled.
+
+---
+
+CONFIGURATION & STATE
+
+ATE uses centralized configuration files stored under Resources.
+
+No tuning values are buried inside code.
+
+If configuration is absent:
+• Safe defaults apply  
+• Behavior degrades safely  
+
+---
+
+LOGGING & TRANSPARENCY
+
+Every operation produces logs.
+
+Logs are human-readable.
+Logs are never suppressed.
+Logs explain success and failure.
+
+The engine refuses silent failure.
+
+---
+
+WHAT HAPPENS IF A MODULE FAILS
+
+Module failure:
+
+• Does NOT crash the engine  
+• Does NOT cascade  
+• Is logged  
+• Is visible  
+
+ATE favors loud failure over hidden failure.
+
+---
+
+SYSTEM BOUNDARIES
+
+ATE will never:
+
+• Modify BIOS  
+• Flash firmware  
+• Touch bootloaders  
+• Encrypted volumes  
+• Replace drivers  
+• Install services  
+• Run background agents  
+• Access networks  
+• Upload data  
+• Operate silently  
+
+---
+
+VERSION CONTROL
+
+ATE enforces release discipline.
+
+Each build:
+• Has version identity  
+• Tracks changes  
+• Refuses silent mutation  
+• Preserves rollback logic
+
+No self-updates exist.
+
+---
+
+USER TRUST MODEL
+
+ATE assumes:
+• Stability matters
+• Undo matters
+• Visibility matters
+
+Aggression is not optimization.
+
+Conservative engineering is.
+
+---
+
+PATREON TRANSPARENCY
+
+ATE_Free is free.
+
+Patreon:
+• Does not unlock features
+• Does not sell behavior
+• Does not change execution
+• Does not sell access
+
+Patreon funds development, documentation, and testing.
+
+The engine remains identical for everyone.
+
+---
+
+SUPPORT CONTEXT
+
+Support expectations are defined in FAQ.txt.
+
+This document is architecture transparency — not a troubleshooting guide.
+
+---
+
+LEGAL CONTEXT
+
+Use is governed by LICENSE.txt and LegalAndDisclaimer.txt.
+
+---
+
+END OF MODULE OVERVIEW

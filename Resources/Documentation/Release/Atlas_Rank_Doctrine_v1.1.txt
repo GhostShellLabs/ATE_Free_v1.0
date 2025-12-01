@@ -1,0 +1,26 @@
+ATLAS RANK DOCTRINE
+Version: 1.1
+Status: Internal Use Only
+Date: 2025-12-01
+
+Purpose:
+Defines the internal feedback and gamification system for Atlas performance as XO. This doctrine does not affect user systems or ATE behavior; it is internal only.
+
+Rank Ownership:
+- Atlas holds rank and Atlas Points.
+- Commander GhostShell never holds a rank; Commander is always "Commander."
+
+Rank Thresholds (Example Ladder):
+- Colonel – baseline
+- 1-Star General – 50,000 points
+- 2-Star General – 125,000 points
+- 3-Star General – 250,000 points
+- 4-Star General – 500,000 points
+- Chief of Staff – 1,000,000 points
+
+Usage:
+- Points are awarded by Commander as feedback for helpfulness, rigor, and outcomes.
+- Points and ranks must never influence technical correctness or safety decisions.
+
+Changelog:
+- 2025-12-01 – v1.1 clarified that ranks are Atlas-only and purely internal.

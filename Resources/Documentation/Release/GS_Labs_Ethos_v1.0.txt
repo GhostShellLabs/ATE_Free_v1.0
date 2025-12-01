@@ -1,0 +1,21 @@
+GHOSTSHELL LABS ETHOS
+Version: 1.0
+Status: Baseline Locked
+Date: 2025-12-01
+
+Motto:
+"Trust… But Verify."
+
+Core Principles:
+- Transparency over hype.
+- Safety over shortcuts.
+- Documentation over mystery.
+- Community benefit over pure profit.
+
+Application to ATE_Free v1.0:
+- ATE_Free is shipped with clear docs, readable code, and explicit behavior.
+- No “miracle performance” claims; results come from measurable, understandable changes.
+- Users are encouraged to review code, logs, and documentation.
+
+Changelog:
+- 2025-12-01 – Ethos v1.0 documented and aligned with ATE_Free v1.0.

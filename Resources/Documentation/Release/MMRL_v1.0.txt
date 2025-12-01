@@ -1,0 +1,74 @@
+MASTER MODULE AND RULE LIST (MMRL)
+Version: 1.0
+Status: Certified Baseline
+Date: 2025-12-01
+Governed By: Master_Release_Plan_v1.0.txt and AMDD_v1.0.txt
+
+Purpose:
+Defines the authoritative list of ATE modules, their responsibilities, and allowed dependencies.
+
+Certified Module Set (ATE_Free v1.0):
+- ATE_Bootstrap.ps1
+  Responsibility: Entry point, CLI parsing, Front Door interactive loop.
+  Allowed Dependencies: ATE_Core, ATE_Config, ATE_Logging, ATE_Utils.
+
+- ATE_Core.ps1
+  Responsibility: Core orchestrator, high-level flow control, Front Door UI logic.
+  Allowed Dependencies: All certified ATE_* domain modules, ATE_Config, ATE_Logging, ATE_Utils.
+
+- ATE_Config.ps1
+  Responsibility: Configuration load/save/validation from Resources\Config.
+  Allowed Dependencies: ATE_Logging, ATE_Utils.
+
+- ATE_Logging.ps1
+  Responsibility: Unified logging, diagnostics, and trace output to Resources\Logs.
+  Allowed Dependencies: ATE_Config, ATE_Utils.
+
+- ATE_Utils.ps1
+  Responsibility: Helper utilities, validation, shared helpers, non-domain-specific logic.
+  Allowed Dependencies: None (pure utility).
+
+- ATE_System.ps1
+  Responsibility: OS and system-level tuning (e.g., services, power plans) per safety doctrine.
+  Allowed Dependencies: ATE_Config, ATE_Logging, ATE_Utils.
+
+- ATE_Storage.ps1
+  Responsibility: Storage-related tuning (e.g., disk policies) per safety doctrine.
+  Allowed Dependencies: ATE_Config, ATE_Logging, ATE_Utils.
+
+- ATE_Network.ps1
+  Responsibility: Network-related tuning within safe, reversible boundaries.
+  Allowed Dependencies: ATE_Config, ATE_Logging, ATE_Utils.
+
+- ATE_GPU.ps1
+  Responsibility: GPU-adjacent tuning where feasible (OS-level; no driver hacking).
+  Allowed Dependencies: ATE_Config, ATE_Logging, ATE_Utils.
+
+- ATE_Audio.ps1
+  Responsibility: Audio stack checks and safe adjustments only.
+  Allowed Dependencies: ATE_Config, ATE_Logging, ATE_Utils.
+
+- ATE_Security.ps1
+  Responsibility: Security-conscious tuning (no disabling of core protections without explicit user consent).
+  Allowed Dependencies: ATE_Config, ATE_Logging, ATE_Utils.
+
+- ATE_UI.ps1
+  Responsibility: Simple UI helpers (color output, banners, etc.), no logic that alters system state.
+  Allowed Dependencies: ATE_Utils, ATE_Logging.
+
+- ATE_Splash.ps1
+  Responsibility: Non-blocking, cosmetic splash presentation from Resources\Assets\Splash.
+  Allowed Dependencies: ATE_Utils, ATE_Logging.
+  Notes: Failure to load splash must not abort engine execution.
+
+Deprecated / Forbidden Modules:
+- ATE_Console.ps1 — Removed from architecture; must not be reintroduced without explicit Commander approval and full document updates.
+
+Module Governance Rules:
+- Any new module, or removal/rename of an existing module, requires:
+  - Commander approval.
+  - Updates to MMRL, AMDD, and Master Release Plan.
+- Cross-module dependencies must remain within the constraints defined here and in AMDD.
+
+Changelog:
+- 2025-12-01 – Certified module set and rules locked for ATE_Free v1.0.

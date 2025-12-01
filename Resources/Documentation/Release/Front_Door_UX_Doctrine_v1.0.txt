@@ -1,0 +1,30 @@
+FRONT DOOR UX DOCTRINE
+Version: 1.0
+Status: Baseline Locked
+Date: 2025-12-01
+Governed By: Master_Release_Plan_v1.0.txt
+
+Purpose:
+Defines the user experience expectations and invariants for the ATE_Free Front Door interface.
+
+Interactive Mode (No CLI switches):
+- A persistent Front Door menu is presented.
+- User may run one or more tuning modules in sequence.
+- Upon completion of a module, control returns to the Front Door menu.
+- Exit option cleanly terminates the session.
+
+CLI One-Shot Mode (With switches):
+- ATE runs the specified operations once and exits.
+- No Front Door menu is presented.
+- No blocking “Press ENTER to exit” prompt in scripted/automation scenarios.
+
+Splash Behavior:
+- Splash window is cosmetic-only and must not block or control console lifetime.
+- Failure to load splash must not abort engine execution.
+
+UX Invariants:
+- Errors should be logged and surfaced clearly; no silent failures.
+- UX behavior should remain consistent across releases unless explicitly documented and versioned.
+
+Changelog:
+- 2025-12-01 – Front Door UX Doctrine v1.0 locked for ATE_Free v1.0.

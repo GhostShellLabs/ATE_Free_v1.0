@@ -1,0 +1,78 @@
+Copyright (c) 2025 GhostShell Labs
+
+All rights reserved.
+
+Permission is hereby granted to any individual obtaining a copy of this software and 
+associated documentation files (the “Software”) to install, execute, and modify the 
+Software solely for personal, non-commercial use, subject to the terms and conditions below.
+
+DEFINITIONS
+
+“Software” means the Atlas Tuning Engine (ATE_Free) program and all associated files, 
+documentation, updates, and derivative works.
+
+“Personal Use” means use by a single individual for private, non-commercial purposes 
+on systems owned or controlled by that individual.
+
+“Distribution” means making the Software available to any third party by any means, 
+including posting, uploading, mirroring, packaging, bundling, or sharing.
+
+“Commercial Use” includes use in business environments, monetized services, consulting, 
+integration into paid workflows, or any activity generating revenue.
+
+RESTRICTIONS
+
+You may not, directly or indirectly:
+
+1. Sell, rent, lease, sublicense, or commercially exploit the Software.  
+2. Redistribute, publish, upload, mirror, or make the Software available to third parties.  
+3. Bundle the Software with another product or service.  
+4. Publish modified versions, forks, derivatives, or re-branded copies.  
+5. Remove or modify copyright or attribution.  
+6. Operate the Software as part of a paid service or revenue workflow.  
+
+ATTRIBUTION
+
+You must retain all copyright and license notices in any permitted use.
+
+OWNERSHIP
+
+The Software is licensed, not sold. GhostShell Labs retains all ownership rights.
+
+No patent or intellectual property rights are granted or implied by this license.
+
+DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL GHOSTSHELL LABS BE LIABLE FOR ANY DAMAGES INCLUDING SYSTEM FAILURE, DATA LOSS, 
+LOSS OF PROFITS, OR INTERRUPTION ARISING FROM USE OR MISUSE.
+
+INDEMNIFICATION
+
+You agree to indemnify GhostShell Labs for claims arising from misuse or violation of this license.
+
+TERMINATION
+
+License automatically terminates upon breach. All copies must be destroyed.
+
+RESERVATION OF RIGHTS
+
+All rights not expressly granted are reserved.
+
+SEVERABILITY
+
+Invalid provisions do not affect remaining terms.
+
+ENTIRE AGREEMENT
+
+This license constitutes the entire agreement.
+
+GOVERNING LAW
+
+This license shall be governed by the laws of the State of Alabama, United States.
+
+END OF LICENSE

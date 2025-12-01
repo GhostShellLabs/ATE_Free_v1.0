@@ -1,0 +1,23 @@
+VERSIONING REQUIREMENTS
+Version: 1.0
+Status: Baseline Locked
+Date: 2025-12-01
+Governed By: Master_Release_Plan_v1.0.txt
+
+Product Identity:
+- Name: Atlas Tuning Engine (ATE_Free)
+- Release Identifier: ATE_Free_v1.0.0_Release
+
+Semantic Versioning (SemVer):
+- Format: MAJOR.MINOR.PATCH
+- PATCH: Internal bugfixes or non-behavioral corrections.
+- MINOR: Backward-compatible feature additions or observable behavior improvements.
+- MAJOR: Breaking changes to behavior, structure, or user contracts.
+
+Rules:
+- Any change to tuning behavior, module contracts, or UX must be evaluated for version impact.
+- Version number must be visible in README and/or banner output.
+- No “silent” version changes; every version change requires a CHANGELOG entry.
+
+Changelog:
+- 2025-12-01 – v1.0 Versioning Requirements locked for ATE_Free v1.0.

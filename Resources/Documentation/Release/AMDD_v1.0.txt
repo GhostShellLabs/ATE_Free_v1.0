@@ -1,0 +1,47 @@
+ATLAS TUNING ENGINE MASTER DESIGN DOCUMENT (AMDD)
+Version: 1.0
+Status: Baseline Locked
+Date: 2025-12-01
+Governed By: Master_Release_Plan_v1.0.txt
+
+Purpose:
+Defines the architecture, layering doctrine, and safety principles for ATE_Free v1.0.
+
+Architecture Overview:
+- ATE_Bootstrap: Entry point and mode selection (interactive vs one-shot).
+- ATE_Core: Central orchestrator for module execution and shared behaviors.
+- ATE_* Modules: Domain-specific tuning logic (System, Storage, Network, GPU, Audio, Security, UI).
+- ATE_Utils: Shared helper utilities.
+- ATE_Config: Configuration loading, validation, and persistence.
+- ATE_Logging: Centralized logging, telemetry (local only), and diagnostics.
+- ATE_Splash: Cosmetic-only splash presentation; non-fatal on error.
+
+Layering Doctrine:
+- Bootstrap calls Core.
+- Core coordinates calls into domain modules.
+- Domain modules may depend on Utils, Logging, and Config only.
+- Modules must not call each other directly unless explicitly documented in MMRL.
+- No module may perform I/O (file/registry/system) except through approved patterns that respect logging and backup rules.
+
+Safety Doctrine:
+- Tuning defaults must be non-destructive and reversible where possible.
+- Backups (where applicable) must be created or explicitly declined before destructive changes.
+- Logging must capture key actions, decisions, and errors.
+- No hidden or obfuscated behavior is permitted.
+
+Engine vs Resources:
+- Engine directory contains code only.
+- Resources directory contains Config, Logs, Backups, and Assets (including splash image).
+- No runtime artifacts may be written under Engine; any such behavior is a defect.
+
+Deferred Concepts (Not in v1.0):
+- Pro-tier modules or licensing logic.
+- Automated heuristics-based tuning.
+- Cross-machine orchestration or remote execution.
+
+Enforcement:
+- Any implementation that violates layering, Engine/Resources separation, or safety doctrine must be treated as a bug.
+- Architectural changes require updates to AMDD, MMRL, and Master Release Plan.
+
+Changelog:
+- 2025-12-01 – AMDD v1.0 baseline locked for ATE_Free v1.0.

@@ -1,0 +1,52 @@
+MASTER RELEASE PLAN — ATE_Free v1.0
+Version: 1.0
+Status: Baseline Locked
+Date: 2025-12-01
+Owner: Commander GhostShell
+
+Purpose:
+Defines the authoritative governance, release scope, and document hierarchy for Atlas Tuning Engine (ATE_Free) v1.0.
+All other ATE governance documents derive their authority from this plan.
+
+Release Scope (In-Scope for v1.0):
+- Modular PowerShell-based tuning engine (ATE_Free).
+- Front Door interactive UX and CLI one-shot mode.
+- Certified module set and module lock.
+- Engine/Resources directory structure and path authority.
+- Safety-first tuning defaults and non-destructive behavior.
+- Logging and transparency requirements.
+- Versioning and identity rules.
+- Baseline documentation and certification.
+
+Out-of-Scope (Deferred Beyond v1.0):
+- ATE Pro features or paid functionality.
+- Cloud services, remote APIs, or auto-update mechanisms.
+- Automated telemetry-driven tuning.
+- Non-Windows targets.
+
+Authoritative Child Documents (Baseline Set):
+- AMDD_v1.0.txt — Atlas Tuning Engine Master Design Document
+- MMRL_v1.0.txt — Master Module & Rule List
+- ATE_Implementation_Roadmap_v1.0.txt
+- ATE_Certification_Checklist_v1.0.txt
+- Versioning_Requirements_v1.0.txt
+- ATE_Directory_Structure_Lock_v1.0.txt
+- ATE_Module_Lock_v1.0.txt
+- Front_Door_UX_Doctrine_v1.0.txt
+- Trust_and_DocSync_Doctrine_v1.0.txt
+- GS_Labs_Ethos_v1.0.txt
+- Atlas_Rank_Doctrine_v1.1.txt
+- ATE_Free_v1.0_Release_Certification.txt
+
+Governance Rules:
+- No change is considered official unless it is reflected in this plan or an authoritative child document.
+- The ATE_Certification_Checklist_v1.0.txt governs release readiness; no public release is permitted without checklist completion.
+- In case of ambiguity between documents, precedence is:
+  Master Release Plan > Certification Checklist > AMDD/MMRL > Other doctrine.
+
+Version Agility:
+- When Commander declares an updated version of any child document (e.g., AMDD v1.0 → v1.1), the newly declared document becomes authoritative immediately.
+- This Master Release Plan v1.0 remains valid as a container until explicitly superseded (e.g., Master_Release_Plan_v1.1).
+
+Changelog:
+- 2025-12-01 – v1.0 baseline locked and hardened for public release.

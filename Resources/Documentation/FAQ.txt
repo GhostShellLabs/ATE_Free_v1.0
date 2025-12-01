@@ -1,0 +1,266 @@
+FAQ
+Atlas Tuning Engine (ATE_Free) v1.0
+GhostShell Labs
+
+---
+
+GENERAL QUESTIONS
+
+Q: Will ATE boost my FPS?
+
+A: Possibly, but it is not guaranteed.
+ATE focuses on removing performance drains, reducing background friction, and correcting misconfiguration. 
+Results depend entirely on your system and starting condition.
+
+ATE is not a frame generator.
+ATE is a system hygiene and performance alignment tool.
+
+---
+
+Q: What exactly does ATE “tune”?
+
+A: ATE analyzes Windows configuration and applies conservative system-level adjustments such as:
+• Background service behavior
+• System policy alignment
+• Storage handling
+• Network configuration
+• GPU-related tuning
+• Audio-related tuning
+• Security misconfiguration clean-up
+
+Nothing touches hardware.
+Nothing touches firmware.
+
+---
+
+Q: Does ATE change my hardware settings?
+
+A: No.
+ATE does not touch BIOS, firmware, voltage control, clock speeds, or device-level tuning.
+It operates strictly inside the Windows operating system.
+
+---
+
+Q: Does ATE install anything?
+
+A: No.
+ATE is portable software.
+There is no installer.
+No services.
+No drivers.
+No background processes.
+
+When you close the tool, it is gone.
+
+---
+
+SAFETY QUESTIONS
+
+Q: Can ATE break my system?
+
+A: ATE is designed to reduce risk, not increase it.
+However, any software that changes system configuration carries some level of responsibility and risk.
+
+ATE:
+• Inspects before acting
+• Logs every change
+• Supports restoration where applicable
+• Avoids irreversible operations
+
+There are no “blind” changes.
+
+---
+
+Q: Will ATE modify BIOS, firmware, or partitions?
+
+A: Never.
+
+ATE will not:
+• Flash firmware
+• Modify BIOS
+• Touch boot loaders
+• Partition disks
+• Modify encryption settings
+• Replace drivers
+• Install background agents
+• Enable telemetry
+
+---
+
+Q: What if something goes wrong?
+
+A: You are never trapped.
+
+ATE provides:
+• Logs for transparency
+• Restore functionality where supported
+• Backup storage in Resources\Backups
+
+If something feels off, you stop and restore.
+
+---
+
+TECHNICAL QUESTIONS
+
+Q: Why PowerShell?
+
+A: Because ATE interacts deeply with Windows system behavior.
+
+PowerShell provides:
+• Native system access
+• Safe automation
+• Auditability
+• Compatibility with Windows internals
+
+ATE uses PowerShell 5.1 for maximum stability and compatibility with Windows subsystems.
+
+---
+
+Q: Can I run ATE in PowerShell 7+?
+
+A: No.
+ATE is designed for Windows PowerShell 5.1.
+Running under PowerShell 7+ is unsupported and may not behave correctly.
+
+---
+
+Q: Does ATE run in the background?
+
+A: No.
+Once you close the tool, nothing remains running.
+
+---
+
+Q: Is internet required?
+
+A: No.
+ATE operates completely offline.
+
+No data is sent.
+No data is uploaded.
+
+---
+
+SUPPORT QUESTIONS
+
+Q: What kind of support do you offer?
+
+A: Best-effort community support.
+
+We provide:
+• Documentation
+• Log interpretation help
+• Issue identification
+
+We do NOT:
+• Remote into systems
+• Diagnose Windows misbehavior
+• Fix hardware issues
+• Troubleshoot third-party software
+• Tune individual builds
+
+ATE is a tool, not a managed service.
+
+---
+
+Q: What logs do I send if I ask for help?
+
+A: Always include:
+Resources\Logs  
+and describe exactly what operation you ran.
+
+---
+
+LICENSING & USAGE
+
+Q: Can I share ATE with others?
+
+A: No.
+You may not redistribute, mirror, or repost ATE.
+
+---
+
+Q: Can I sell ATE or bundle it?
+
+A: No.
+ATE is not for resale.
+ATE cannot be bundled with other products or services.
+
+---
+
+Q: Can I modify ATE?
+
+A: You may modify it for personal use only.
+You may not redistribute, republish, or sell modified versions.
+
+---
+
+Q: Can I use ATE at work or in business?
+
+A: No.
+ATE is licensed for personal, non-commercial use only.
+
+---
+
+PATREON QUESTIONS
+
+Q: What is Patreon for?
+
+A: Patreon supports:
+• Development
+• Documentation
+• Testing
+• Feature growth
+
+It does not sell software.
+It does not buy your support.
+
+---
+
+Q: What do supporters receive?
+
+A: Supporters may receive:
+• Early builds
+• Documentation
+• Roadmaps
+• Experimental modules
+• Architecture notes
+
+Your software behavior does not change based on Patreon.
+
+---
+
+LEGAL QUESTIONS
+
+Q: Is there any warranty?
+
+A: No.
+ATE is provided AS-IS.
+You are responsible for use, backups, and validation.
+
+---
+
+Q: Where is the full license?
+
+A: In LICENSE.txt included with the package.
+
+---
+
+FINAL WORD
+
+ATE is designed to respect your system and your time.
+
+It favors:
+Predictability.
+Transparency.
+Conservatism.
+
+If a tweak cannot be safely undone, it is not applied.
+
+If you are looking for miracles, this isn’t it.
+
+If you are looking for control — welcome home.
+
+---
+
+END OF FAQ

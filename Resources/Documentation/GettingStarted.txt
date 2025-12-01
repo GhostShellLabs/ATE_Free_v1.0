@@ -1,0 +1,187 @@
+GETTING STARTED
+Atlas Tuning Engine (ATE_Free) v1.0
+GhostShell Labs
+
+---
+
+WELCOME
+
+Atlas Tuning Engine is designed to be safe, readable, and predictable.
+
+This document walks you through your first safe run.
+
+Nothing here is complicated.
+Nothing here is rushed.
+Nothing happens without your approval.
+
+---
+
+STEP 1 — EXTRACT SAFELY
+
+Extract the entire ATE_Free folder to a normal location such as:
+
+Desktop
+Documents
+A secondary drive
+
+Do NOT run directly from a ZIP file.  
+Do NOT place inside Program Files.
+
+ATE is a portable tool. It should live in a folder you control.
+
+---
+
+STEP 2 — LAUNCH
+
+Run one of the following:
+
+ATE_Launcher.bat  
+ATE_Bootstrap.ps1  
+
+If prompted, allow administrator privileges.  
+This gives ATE permission to inspect system configuration.
+
+Nothing is changed at launch.
+
+---
+
+STEP 3 — READ-ONLY FIRST (MANDATORY)
+
+Always begin with Read-Only mode.
+
+This does NOT change anything.
+
+It scans:
+• System configuration
+• Performance-impacting services
+• Policy alignment
+• Known friction points
+
+Think of this as diagnostics — not tuning.
+
+---
+
+STEP 4 — REVIEW RESULTS
+
+After the scan:
+
+Open:
+Resources\Logs
+
+You will find:
+• Summary report
+• Detailed logs
+• Detected issues
+
+Read the output.
+
+ATE never hides what it finds.
+
+This phase is about understanding your system before touching it.
+
+---
+
+STEP 5 — APPLY ONLY IF COMFORTABLE
+
+If — and only if — you agree with the recommendations:
+
+Choose Apply Mode.
+
+ATE will:
+• Confirm actions
+• Log each change
+• Track success and failures
+
+Nothing is done silently.
+Nothing happens without visibility.
+
+---
+
+STEP 6 — VERIFY
+
+After applying:
+
+Run Read-Only again.
+Compare logs.
+Confirm change behavior.
+
+This is how you validate the system.
+
+---
+
+RESTORE IF NEEDED
+
+If something does not feel right:
+
+Use Restore mode.
+
+ATE stores backups in:
+Resources\Backups
+
+Restoring is part of the design.
+
+ATE never assumes perfection.
+Neither should you.
+
+---
+
+IMPORTANT WARNINGS
+
+• Do NOT run on PowerShell 7+  
+• Do NOT use on Windows Server  
+• Do NOT expect miracles  
+• Do NOT ignore logs  
+• Do NOT apply blindly  
+
+ATE favors correctness, not speed.
+
+---
+
+COMMON QUESTIONS
+
+Q: Is it safe to run multiple times?
+Yes. ATE is idempotent where applicable.
+
+Q: Does it change hardware?
+No.
+
+Q: Does it install anything?
+No.
+
+Q: Does it stay running?
+No.
+
+Q: Do I need internet?
+No.
+
+---
+
+GOOD PRACTICES
+
+• Read logs  
+• Apply changes gradually  
+• Reboot if prompted  
+• Validate results  
+• Restore if unsure  
+
+ATE is not a game cheat.
+It’s engineering.
+
+---
+
+YOU ARE DONE
+
+There is no subscription.
+No remote connection.
+No service running.
+No background process.
+
+The engine completes and exits.
+
+You’re in control.
+
+---
+
+Trust… But Verify.
+
+Developed by GhostShell Labs

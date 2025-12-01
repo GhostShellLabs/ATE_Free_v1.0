@@ -1,0 +1,115 @@
+CHANGELOG
+Atlas Tuning Engine (ATE_Free) v1.0
+
+------------------------------------
+2025-11-30 — Documentation Sync & UX Hardening
+------------------------------------
+
+Core & UX
+- Fixed rank display bug ("System.Object[]" output) so rank now resolves to a clean, human-readable string.
+- Normalized score display formatting across the Front Door UI and scorecard output.
+- Confirmed InteractiveFrontDoorSession behavior:
+  - Persistent Front Door loop in interactive mode.
+  - "Press ENTER to close" now only appears for one-shot CLI executions.
+- Hardened Front Door flow for repeated mode runs in a single console session.
+
+Splash & UI
+- Removed legacy/unused Hide-ATEConsole and Show-ATEConsole stubs from ATE_Splash.
+- Verified splash remains cosmetic-only, non-blocking, DPI-aware, and does not alter console state.
+- Confirmed splash failures do not prevent engine execution.
+
+Architecture & Pathing
+- Enforced canonical directory structure:
+  - Engine = code only.
+  - Resources = logs, backups, configs, assets.
+- Normalized path authority across all modules:
+  - ProductRoot
+  - EngineRoot
+  - ResourcesRoot
+  - LogRoot
+  - BackupRoot
+  - ConfigPath
+  - SplashPath
+- Removed any implicit or legacy path writes into Engine.
+- Locked directory layout as ATE v1.0 golden baseline.
+
+Module Registry & Lock
+- Certified final module set and locked as authoritative:
+  - ATE_Bootstrap.ps1
+  - ATE_Core.ps1
+  - ATE_Config.ps1
+  - ATE_Logging.ps1
+  - ATE_Utils.ps1
+  - ATE_System.ps1
+  - ATE_Storage.ps1
+  - ATE_Network.ps1
+  - ATE_GPU.ps1
+  - ATE_Audio.ps1
+  - ATE_Security.ps1
+  - ATE_UI.ps1
+  - ATE_Splash.ps1
+- Permanently removed ATE_Console.ps1 from production architecture.
+- Confirmed no runtime dependency on internal tools.
+
+Documentation & Compliance
+- Rebuilt README in official GhostShell Labs voice.
+- Added explicit:
+  - Safety philosophy
+  - Privacy statement (no telemetry / no network calls)
+  - Patreon disclaimer
+  - Support boundaries
+  - System requirements
+  - Restore expectations
+- Replaced custom stub license with fully structured proprietary license.
+- Added:
+  - Explicit non-commercial clause
+  - Anti-redistribution controls
+  - Attribution enforcement
+  - Indemnification clause
+  - Patent-rights exclusion
+  - Governing law: State of Alabama, USA
+- Generated:
+  - ArchitectureOverview.txt
+  - LegalAndDisclaimer.txt
+- Synchronized documentation against README + LICENSE + architecture doctrine.
+- Enforced ATE Documentation Sync Rule v1.0 compliance.
+
+Release Integrity
+- Locked ATE_Free v1.0 as release-candidate baseline.
+- Confirmed:
+  - Identity section certified complete
+  - Trust and safety pillars certified complete
+  - Versioning discipline enforced
+- Deviations from certified baseline now require Commander approval.
+
+------------------------------------
+2025-11-29 — Infrastructure & Test Environment
+------------------------------------
+- Provisioned Azure test VM baseline in Canada Central.
+- Standardized Windows Server 2022 test configuration.
+- Locked deployment parameters for reproducible rebuilds.
+- Verified rollback environment safety.
+
+------------------------------------
+2025-11-28 — Engine Stabilization
+------------------------------------
+- Resolved GameBar property handling failure.
+- Improved defensive handling for unsupported OS storage queries.
+- Stabilized Read-Only output consistency.
+- Verified backup and restore mechanics across modules.
+
+------------------------------------
+2025-11-27 — Modular Architecture Certification
+------------------------------------
+- Completed modular engine migration.
+- Certified v1.0 as golden architecture baseline.
+- Finalized:
+  - Directory structure
+  - Module separation
+  - Centralized logging
+  - Configuration authority
+- Deprecated all pre-v1.0 releases.
+
+------------------------------------
+
+END OF CHANGELOG

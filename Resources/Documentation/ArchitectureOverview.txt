@@ -1,0 +1,207 @@
+ARCHITECTURE OVERVIEW
+Atlas Tuning Engine (ATE_Free) v1.0
+
+OVERVIEW
+
+Atlas Tuning Engine (ATE_Free) is a modular Windows tuning engine designed to analyze system configuration, identify common performance friction points, and apply conservative optimizations only when the user explicitly allows it. The engine is built to favor safety, transparency, and reversibility over aggressive or destructive tuning tactics.
+
+ATE does not attempt to replace Windows behavior wholesale. It corrects misconfiguration, disables known performance drains, and aligns system settings with real-world gaming best practices — without modifying the operating system in ways that are difficult or impossible to recover from.
+
+This is an engineering tool, not a shortcut generator.
+
+CORE ARCHITECTURE
+
+ATE is designed around a strict separation between code execution and system state.
+
+The product is split into two primary areas:
+
+ENGINE
+Contains only the tuning engine logic, audit code, validation rules, and orchestration logic.
+
+RESOURCES
+Contains all logs, backups, configuration data, and assets produced by the engine at runtime.
+
+This separation is intentional. Code never mixes with user data, and the engine never hides where state is stored.
+
+ATE does not require external services, cloud platforms, background agents, or installed dependencies beyond Windows PowerShell.
+
+All processing occurs locally on the system.
+
+No network access is required.
+
+MODULE SYSTEM
+
+ATE is composed of independent modules. Each module focuses on a specific system area such as:
+
+• Core behavior and safety gates
+• System configuration
+• Storage behavior
+• Network settings
+• GPU configuration
+• Audio services
+• Security posture
+• Interface behavior
+
+Modules operate independently and are isolated from one another. Faults in one module do not cascade into others. This limits risk and ensures failures are visible rather than hidden.
+
+The modular structure allows updates to improve individual areas without destabilizing the rest of the engine.
+
+This design also allows future expansion without forcing risk into existing behavior.
+
+CONFIGURATION & STATE
+
+ATE operates using a centralized configuration model.
+
+No tuning values are scattered across scripts.
+No magic numbers are hardcoded into execution logic.
+
+All change targets exist in named configuration definitions and are evaluated under controlled rules.
+
+Default state is conservative.
+
+No setting is changed unless the engine determines:
+• It is safe
+• It is relevant
+• It is reversible
+• It is supported
+
+Predictability is more important than speed.
+
+LOGGING & TRANSPARENCY
+
+Logging is not optional in ATE.
+
+Every scan produces:
+• A summary report
+• Detailed execution logs
+• State validation output
+
+Logs are human-readable and stored under the Resources folder.
+
+Users are encouraged to read the logs.
+
+Nothing in the engine runs without traceability.
+
+If a change occurs, the log explains it.
+
+If a restore occurs, the log records it.
+
+The user is never blind.
+
+SAFETY DESIGN
+
+ATE does not auto-apply.
+
+Inspection always comes first.
+
+The engine is designed around a controlled lifecycle:
+
+Inspect
+
+Report
+
+Ask
+
+Apply
+
+Verify
+
+Restore capability is built into the engine.
+Backups are created where supported.
+Rollbacks exist to reduce permanent risk.
+
+ATE is not allowed to operate in a way that cannot be undone.
+
+If a change cannot be safely restored, it is not applied.
+
+SYSTEM BOUNDARIES
+
+ATE will never:
+
+• Modify BIOS
+• Flash firmware
+• Touch boot loaders
+• Partition disks
+• Modify encryption settings
+• Replace drivers
+• Inject kernel software
+• Install services
+• Run background agents
+• Transmit telemetry
+• Perform cloud operations
+• Upload data
+• Operate silently
+
+ATE exists inside operating system boundaries and respects them.
+
+If a tuning method requires crossing those boundaries, ATE does not implement it.
+
+VERSION & CONTROL
+
+ATE maintains strict versioning discipline.
+
+Every release:
+• Has a defined version
+• Is logged in CHANGELOG
+• Is released as a complete package
+• Does not mutate in place
+• Preserves rollback integrity
+
+There is no self-updating behavior.
+
+Users control when they upgrade.
+
+Change history is visible.
+
+Nothing is hidden between releases.
+
+USER TRUST MODEL
+
+ATE assumes:
+
+• Systems matter
+• Stability matters
+• Trust is earned
+• Undo matters
+• Predictability beats aggression
+
+The engine favors safety over speed.
+
+It favors correctness over risk.
+
+It favors clarity over automation.
+
+Trust is not requested — it is supported by design.
+
+PATREON CONTEXT
+
+ATE_Free is provided at no cost.
+
+Patreon does not sell software.
+
+Patreon does not sell support contracts.
+
+Patreon exists to fund:
+• Continued development
+• Documentation improvement
+• Tool expansion
+• Quality control
+• Engineering time
+
+Supporters contribute to development.
+They do not purchase behavior.
+
+The engine operates the same way for everyone.
+
+LEGAL CONTEXT
+
+Use of this software is governed by the LICENSE.txt file.
+
+The software is provided AS-IS.
+No warranty.
+No performance guarantee.
+No liability for damage.
+
+Users are responsible for backups and validation.
+
+END OF ARCHITECTURE OVERVIEW

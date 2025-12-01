@@ -1,0 +1,27 @@
+GHOSTSHELL LABS — ATE_Free v1.0 BASELINE DOCUMENT SET
+Status: Baseline Locked
+Date: 2025-12-01
+
+Purpose:
+This folder contains the authoritative governance and certification documents for ATE_Free v1.0.
+
+Documents:
+- Master_Release_Plan_v1.0.txt
+- AMDD_v1.0.txt
+- MMRL_v1.0.txt
+- ATE_Implementation_Roadmap_v1.0.txt
+- ATE_Certification_Checklist_v1.0.txt
+- Versioning_Requirements_v1.0.txt
+- ATE_Directory_Structure_Lock_v1.0.txt
+- ATE_Module_Lock_v1.0.txt
+- Front_Door_UX_Doctrine_v1.0.txt
+- Trust_and_DocSync_Doctrine_v1.0.txt
+- GS_Labs_Ethos_v1.0.txt
+- Atlas_Rank_Doctrine_v1.1.txt
+- ATE_Free_v1.0_Release_Certification.txt
+
+Atlas BIOS Compatibility:
+This baseline is designed to be compatible with Atlas BIOS v1.3. Behavior and recommendations made by Atlas under BIOS v1.3 should align with the rules and constraints described in these documents.
+
+Version Agility:
+If Commander declares newer versions of any of these documents (e.g., AMDD v1.1), those newer documents become authoritative immediately, even if this index still lists v1.0 examples.

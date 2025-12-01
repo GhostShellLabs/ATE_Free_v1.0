@@ -1,0 +1,157 @@
+VERSIONING POLICY
+Atlas Tuning Engine (ATE_Free) v1.0
+GhostShell Labs
+
+---
+
+PURPOSE
+
+This document explains how versions of Atlas Tuning Engine are managed, identified, and released.
+
+Versioning exists for:
+• Trust
+• Transparency
+• Predictability
+• Rollback safety
+
+If a system update changes behavior, you deserve to know.
+
+---
+
+VERSION FORMAT
+
+ATE uses semantic versioning:
+
+MAJOR.MINOR.PATCH
+
+Examples:
+1.0.0  
+1.1.0  
+1.1.1  
+
+---
+
+WHAT EACH NUMBER MEANS
+
+MAJOR  
+Large architectural or behavior changes.
+Backwards compatibility is not guaranteed.
+User review recommended.
+
+MINOR  
+Feature additions or non-breaking behavior changes.
+Safe for most users.
+
+PATCH  
+Bug fixes or documentation updates.
+No tuning impact.
+
+---
+
+RELEASE DISCIPLINE
+
+Every release:
+
+• Has a unique version number  
+• Is logged in CHANGELOG.txt  
+• Is distributed as a complete package  
+• Is never silently modified  
+• Does not self-update  
+
+GhostShell Labs does not push hidden changes.
+
+---
+
+COMPATIBILITY GUARANTEE
+
+ATE releases are:
+• Tested before distribution
+• Compatible within a MAJOR line
+• Forward-stable unless documented otherwise
+
+Breaking changes always increment MAJOR.
+
+---
+
+ROLLBACK PHILOSOPHY
+
+ATE does not modify past releases.
+
+If you keep a copy of an older version, it remains valid.
+
+Rolling forward is optional.
+Rolling back is respected.
+
+---
+
+UPDATE DELIVERY
+
+ATE does not update itself.
+
+Users:
+• Download full releases
+• Control when to upgrade
+• Can skip versions
+
+No forced updates.
+No background patching.
+
+---
+
+VERSION VISIBILITY
+
+Version identity is:
+
+• Displayed in the UI
+• Included in README
+• Logged in engine output
+• Recorded in CHANGELOG.txt
+
+No anonymous builds exist.
+
+---
+
+PRE-RELEASE BUILDS
+
+Beta or early-access versions:
+• Are clearly labeled
+• May change behavior
+• Are intended for testing
+• May be unstable
+
+Production builds are explicitly marked Stable.
+
+---
+
+DOWNGRADE POLICY
+
+Downgrading is permitted.
+
+Backward compatibility is preserved within a major version when possible.
+
+---
+
+PATREON CONTEXT
+
+Early builds may be shared through Patreon.
+
+General releases remain public.
+
+Patreon does not override version policy.
+
+There are no private “special builds” that differ in behavior.
+
+---
+
+FINAL NOTE
+
+Versioning is part of user trust.
+
+Silence is not acceptable.
+Surprises are not allowed.
+
+---
+
+END OF POLICY
+
+Trust… But Verify.

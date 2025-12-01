@@ -1,0 +1,31 @@
+ATE IMPLEMENTATION ROADMAP
+Version: 1.0
+Status: Baseline Locked
+Date: 2025-12-01
+Governed By: Master_Release_Plan_v1.0.txt
+
+Purpose:
+Defines the phased implementation path for ATE_Free and clearly separates v1.0 scope from future work.
+
+Phase 1 — Modular Baseline (COMPLETED FOR v1.0):
+- Extract ATE core logic into modular PowerShell scripts.
+- Establish Engine/Resources directory structure.
+- Implement Front Door interactive UX and CLI one-shot mode.
+- Wire ATE_Bootstrap and ATE_Core to use ATE_Config, ATE_Logging, and ATE_Utils.
+- Ensure non-destructive defaults and safety doctrine are respected.
+- Lock module list and directory structure.
+- Produce baseline documentation and certification for ATE_Free v1.0.
+
+Phase 2 — Post-v1.0 Enhancements (NOT IN v1.0):
+- Extended UX improvements, wizards, or presets.
+- Pro-tier or advanced tuning modules.
+- Additional automation and heuristic-based recommendations.
+- Deeper integration with external tools (if approved by Commander).
+
+Roadmap Rules:
+- v1.0 releases may only contain Phase 1 features and behaviors.
+- Phase 2 items and beyond must not be included in v1.0 without explicit revision of this roadmap and Master Release Plan.
+- Future roadmap versions (v1.1+) may extend or adjust phases but must remain explicit about release scope.
+
+Changelog:
+- 2025-12-01 – Phase 1 marked complete; roadmap v1.0 locked for ATE_Free v1.0.

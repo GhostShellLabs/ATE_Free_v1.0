@@ -1,0 +1,28 @@
+ATE DIRECTORY STRUCTURE LOCK
+Version: 1.0
+Status: Baseline Locked
+Date: 2025-12-01
+Governed By: Master_Release_Plan_v1.0.txt and AMDD_v1.0.txt
+
+Purpose:
+Enforces the canonical directory structure and path authority for ATE_Free v1.0.
+
+Canonical Structure:
+- Engine\  → All ATE PowerShell scripts and orchestration code (no runtime artifacts).
+- Resources\
+    Config\   → Configuration files (e.g., ATE_Config.json).
+    Logs\     → Log and diagnostic output.
+    Backups\  → Backup data produced by the engine.
+    Assets\Splash\ → Splash/branding assets (e.g., ATE_Splash.png).
+
+Rules:
+- Engine MUST NOT contain logs, backups, config, or runtime-generated files.
+- Resources is the single canonical home for all runtime artifacts.
+- Any new top-level directory must be explicitly documented and approved.
+
+Defect Definition:
+- Any runtime write into Engine is considered a defect and must be corrected.
+- Any relocation of Config, Logs, or Backups outside Resources requires document updates.
+
+Changelog:
+- 2025-12-01 – Directory Structure Lock v1.0 established for ATE_Free v1.0.

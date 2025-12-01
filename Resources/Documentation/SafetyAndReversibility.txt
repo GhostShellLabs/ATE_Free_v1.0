@@ -1,0 +1,148 @@
+SAFETY & REVERSIBILITY
+Atlas Tuning Engine (ATE_Free) v1.0
+GhostShell Labs
+
+---
+
+WHY THIS DOCUMENT EXISTS
+
+This document explains how Atlas Tuning Engine protects your system.
+
+If you only read one technical document, read this one.
+
+ATE is not built to chase extreme tuning.
+It is built to reduce risk.
+
+---
+
+CORE SAFETY PRINCIPLES
+
+ATE is governed by four foundational rules:
+
+1) INSPECT FIRST  
+   No system changes happen until your system is scanned and reported.
+
+2) EXPLAIN EVERYTHING  
+   Every supported change is recorded in clear, human-readable logs.
+
+3) REVERSIBLE BY DESIGN  
+   If a change cannot be safely undone, it is not applied.
+
+4) USER CONTROL  
+   ATE never auto-applies changes.
+
+---
+
+READ-ONLY BY DEFAULT
+
+ATE always starts in Read-Only mode.
+
+This mode:
+• Performs diagnostics only  
+• Surfaces risks and inefficiencies  
+• Makes recommendations  
+• Applies nothing  
+
+You always see before you act.
+
+---
+
+CONTROLLED APPLICATION
+
+When you choose Apply mode:
+
+• ATE confirms user intent  
+• ATE logs each action  
+• ATE tracks failures  
+• ATE verifies changes  
+
+If something cannot be safely changed, it is skipped.
+
+---
+
+RESTORE CAPABILITY
+
+Restore is not an afterthought.
+
+Where supported:
+• Backups are created before modification  
+• Restore logic exists in the engine  
+• Change tracking is preserved  
+
+If restore is not supported for a setting, that setting is not modified.
+
+---
+
+WHAT ATE WILL NEVER DO
+
+ATE will never:
+
+• Modify BIOS or firmware  
+• Touch boot loaders  
+• Partition disks  
+• Modify encryption  
+• Replace drivers  
+• Install services  
+• Enable telemetry  
+• Upload data  
+• Contact the internet  
+
+ATE has no network behavior.
+
+---
+
+FAILURE HANDLING
+
+ATE favors loud failure over silent failure.
+
+If a change fails:
+• It is logged  
+• It does not cascade  
+• The engine continues safely  
+
+Unknown failure never equals silent execution.
+
+---
+
+RECOVERY EXPECTATIONS
+
+You are in control.
+
+If something feels wrong:
+• Stop
+• Restore
+• Validate
+
+ATE never traps you.
+
+---
+
+RESPONSIBILITY
+
+ATE provides safe tooling.
+
+You provide:
+• Judgment  
+• Validation  
+• Backup discipline  
+
+No tuning engine can eliminate responsibility.
+
+---
+
+LEGAL REMINDER
+
+This software is provided AS-IS.
+
+No warranty is provided.
+No performance guarantee is made.
+
+Use is governed by:
+LICENSE.txt  
+LegalAndDisclaimer.txt  
+
+---
+
+END OF SAFETY DOCUMENT
+
+Trust… But Verify.
