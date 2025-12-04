@@ -1,5 +1,12 @@
 # Atlas Tuning Engine (ATE_Free) v1.0
 
+## Support & Development
+
+GhostShell Labs is funded by community backers.
+
+Support the lab:
+https://patreon.com/GhostShellLabs
+
 ## Join GhostShell Labs
 
 Looking for support, updates, or what's coming next?
